@@ -1,0 +1,33 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+    height: auto;
+    width: 100vw;   
+}
+
+
+.nav{
+    display: flex;
+    flex-direction: row;
+    width: 100vw;
+    gap: 5%;
+    min-height: 8vh;
+    background-color: black;
+    align-items: center;
+    justify-content: center;
+
+    
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+footer {
+        
+}
