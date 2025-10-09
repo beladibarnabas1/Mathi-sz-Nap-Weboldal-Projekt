@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style2.css">
     <title>Gépész Tanonc Útja</title>
 </head>
 <body>
@@ -50,33 +51,41 @@
         3. feladat: Karbantartás ellenőrzés
     </h3>
 
+    <img class="dragElement" id="dragItem" src="eke.jpg" draggable="true" >
+
+     <div id="d1" class="dropZone">vetés</div>
+     <div id="d2" class="dropZone"><span id="talaj">talajművelés</span></div>
+     <div id="d3" class="dropZone">növényvédelem</div>
+     <div id="d3" class="dropZone">szalma összegyűjtése</div>
+
+
     <p>
         Válaszd ki azokat a dolgokat amiket indulás előtt ellenőrizni kell.(4 helyes válasz)
     </p>
 
     <label for="világítás">világítás</label>
-    <input type="checkbox" id="világítás"><br>
+    <input type="checkbox" id="világítás" value="1"><br>
 
     <label for="gumiabroncs">gumiabroncs</label>
-    <input type="checkbox" id="gumiabroncs"><br>
+    <input type="checkbox" id="gumiabroncs" value="1"><br>
     
     <label for="Szűrő">Szűrő</label>
-    <input type="checkbox" id="Szűrő"><br>
+    <input type="checkbox" id="Szűrő" value="0"><br>
 
     <label for="Hűtőcső">Hűtőcső</label>
-    <input type="checkbox" id="Hűtőcső"><br>
+    <input type="checkbox" id="Hűtőcső" value="0"><br>
 
     <label for="üzemanyagszint">üzemanyagszint</label>
-    <input type="checkbox" id="üzemanyagszint"><br>
+    <input type="checkbox" id="üzemanyagszint" value="1"><br>
 
     <label for="tükör">tükör</label>
-    <input type="checkbox" id="tükör"><br>
+    <input type="checkbox" id="tükör" value="0"><br>
 
     <label for="olajszint">olajszint</label>
-    <input type="checkbox" id="olajszint"><br>
+    <input type="checkbox" id="olajszint" value="1"><br>
 
     <label for="Kipufogócsatorna">Kipufogócsatorna</label>
-    <input type="checkbox" id="Kipufogócsatorna"><br>
+    <input type="checkbox" id="Kipufogócsatorna" value="0"><br>
 
     <h3>
         4. feladat: Növényvédelem
@@ -91,10 +100,10 @@
     </p>
 
     <label for="esos">esős szeles időben</label>
-    <input type="radio" name="ido" id="esos"><br>
+    <input type="radio" name="ido" id="esos" value="0"><br>
 
     <label for="napos">napsütésben, szélcsendben</label>
-    <input type="radio" name="ido" id="napos"><br>
+    <input type="radio" name="ido" id="napos" value="1"><br>
 
     <button type="button" onclick="bekuld()">Beküldés</button>
 </form>
