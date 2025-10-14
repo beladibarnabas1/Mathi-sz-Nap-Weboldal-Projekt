@@ -1,114 +1,120 @@
 <!DOCTYPE html>
-<html lang="hu">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style2.css">
-    <title>Gépész Tanonc Útja</title>
+    <title>Gépész Tanonc Útja”</title>
+
 </head>
 <body>
- 
-<header>
-    Quiz
-</header>
+    <h1>Gépész Tanonc Útja - Kvíz</h1>
+    <p style="text-align: center;">Teszteld a tudásodat ezzel a négy kérdéssel. Részpontokat adunk, ahol alkalmazható. Küldd be a feladatot a végén, hogy lásd az eredményedet!</p>
 
-    
-<form action="" name="gepeszet" id="urlap">
-    <h3>
-        1. feladat: Traktor indítása
-    </h3>
-    <p>
-        Állítsd sorrendbe a traktor elindításához szükséges teendőket.
-    </p>
-    <label for="elso">Első teendő:</label>
-    <select name="elso" id="elso">
-        <option value="1">Kulcs elfordítása</option>
-        <option value="1">Biztonsági öv bekapcsolása</option>
-        <option value="1">Sebesség beállítása induláshoz</option>
-    </select><br><br>
+    <form id="quizForm">
+        <!-- 1. feladat -->
+        <div class="question">
+            <h2>1. feladat: Traktor indítása. Állítsd sorrendbe a traktor indításakor elvégzendő dolgokat</h2>
+            <div class="order-section">
+                <div class="order-select">
+                    <label>Első lépés:</label>
+                    <select id="step1">
+                        <option value="">Választás...</option>
+                        <option value="kulcs">Kulcs elfordítása</option>
+                        <option value="ov">Biztonsági öv bekapcsolása</option>
+                        <option value="sebesseg">Sebesség beállítása induláshoz</option>
+                    </select>
+                </div>
+                <div class="order-select">
+                    <label>Második lépés:</label>
+                    <select id="step2">
+                        <option value="">Választás...</option>
+                        <option value="kulcs">Kulcs elfordítása</option>
+                        <option value="ov">Biztonsági öv bekapcsolása</option>
+                        <option value="sebesseg">Sebesség beállítása induláshoz</option>
+                    </select>
+                </div>
+                <div class="order-select">
+                    <label>Harmadik lépés:</label>
+                    <select id="step3">
+                        <option value="">Választás...</option>
+                        <option value="kulcs">Set the parking brake</option>
+                        <option value="ov">Biztonsági öv bekapcsolása</option>
+                        <option value="sebesseg">Sebesség beállítása induláshoz</option>
+                    </select>
+                </div>
+            </div>
+             </div>
 
-    <label for="masodik">Második teendő:</label>
-    <select name="masodik" id="masodik">
-        <option value="1">Kulcs elfordítása</option>
-        <option value="1">Biztonsági öv bekapcsolása</option>
-        <option value="1">Sebesség beállítása induláshoz</option>
-    </select><br><br>
+        <!-- 2. feladat -->
+        <div class="question">
+            <h2>2. feladat: Munkaeszköz kiválasztása. Húzd az eszközöket a megfelelő helyre.</h2>
+            <div class="drag-container" id="initialDragContainer">
+                <div class="drag-item" draggable="true" id="eke" data-correct-zone="talajmuveles">
+                    <img src="eke.png" alt="eke" title="eke">
+                </div>
+                <div class="drag-item" draggable="true" id="balazo" data-correct-zone="szalma">
+                    <img src="balazo.png" alt="balazo" title="bálázó">
+                </div>
+                <div class="drag-item" draggable="true" id="permetezo" data-correct-zone="novenyvedelem">
+                    <img src="permetezo.png" alt="permetező" title="permetező">
+                </div>
+                <div class="drag-item" draggable="true" id="vetogep" data-correct-zone="vetes">
+                    <img src="vetogep.png" alt="vetogep" title="vetőgép">
+                </div>
+            </div>
+            <div class="drag-container">
+                <div class="dropzone" id="talajmuveles" ondrop="drop(event)" ondragover="allowDrop(event)">
+                   
+                    <div class="dropzone-text">Talajművelés</div>
+                    <div class="dropped-items"></div>
+                </div>
+                <div class="dropzone" id="vetes" ondrop="drop(event)" ondragover="allowDrop(event)">
+                    
+                    <div class="dropzone-text">Vetés</div>
+                    <div class="dropped-items"></div>
+                </div>
+                <div class="dropzone" id="novenyvedelem" ondrop="drop(event)" ondragover="allowDrop(event)">
+                    
+                    <div class="dropzone-text">Növényvédelem</div>
+                    <div class="dropped-items"></div>
+                </div>
+                <div class="dropzone" id="szalma" ondrop="drop(event)" ondragover="allowDrop(event)">
+                    
+                    <div class="dropzone-text">Szalma</div>
+                    <div class="dropped-items"></div>
+                </div>
+            </div>
+            </div>
 
-        <label for="harmadik">Harmadik teendő:</label>
-    <select name="harmadik" id="harmadik">
-        <option value="1">Kulcs elfordítása</option>
-        <option value="1">Biztonsági öv bekapcsolása</option>
-        <option value="1">Sebesség beállítása induláshoz</option>
-    </select><br><br>
-
-    <button type="button" onclick="kovetkezo()">Következő</button>
-
-    <h3>
-        2. feladat: Munkaeszköz kiválasztása
-    </h3>
-
-        <img class="dragElement" id="dragItem" src="eke.jpg" draggable="true" >
-
-     <div id="d1" class="dropZone">vetés</div>
-     <div id="d2" class="dropZone"><span id="talaj">talajművelés</span></div>
-     <div id="d3" class="dropZone">növényvédelem</div>
-     <div id="d3" class="dropZone">szalma összegyűjtése</div>
-
-
-    <h3>
-        3. feladat: Karbantartás ellenőrzés
-    </h3>
-
-    <p>
-        Válaszd ki azokat a dolgokat amiket indulás előtt ellenőrizni kell.(4 helyes válasz)
-    </p>
-
-    <label for="világítás">világítás</label>
-    <input type="checkbox" id="világítás" value="1"><br>
-
-    <label for="gumiabroncs">gumiabroncs</label>
-    <input type="checkbox" id="gumiabroncs" value="1"><br>
-    
-    <label for="Szűrő">Szűrő</label>
-    <input type="checkbox" id="Szűrő" value="0"><br>
-
-    <label for="Hűtőcső">Hűtőcső</label>
-    <input type="checkbox" id="Hűtőcső" value="0"><br>
-
-    <label for="üzemanyagszint">üzemanyagszint</label>
-    <input type="checkbox" id="üzemanyagszint" value="1"><br>
-
-    <label for="tükör">tükör</label>
-    <input type="checkbox" id="tükör" value="0"><br>
-
-    <label for="olajszint">olajszint</label>
-    <input type="checkbox" id="olajszint" value="1"><br>
-
-    <label for="Kipufogócsatorna">Kipufogócsatorna</label>
-    <input type="checkbox" id="Kipufogócsatorna" value="0"><br>
-
-    <h3>
-        4. feladat: Növényvédelem
-    </h3>
-
-    <p>
-        Válaszd ki hogy mikor érdemes permetezni.
-    </p>
-
-    <p>
-        Szőlő:
-    </p>
-
-    <label for="esos">esős szeles időben</label>
-    <input type="radio" name="ido" id="esos" value="0"><br>
-
-    <label for="napos">napsütésben, szélcsendben</label>
-    <input type="radio" name="ido" id="napos" value="1"><br>
-
-    <button type="button" onclick="bekuld()">Beküldés</button>
-</form>
+        <!-- 3. feladat -->
+        <div class="question">
+            <h2>3. feladat: Karbantartás ellenőrzés. Válaszd ki miket kell ellenőrizni a traktor indítása előtt(3 jó válasz)</h2>
+            <label><input type="checkbox" name="q1" value="gumiabroncsok"> gumiabroncsok</label>
+            <label><input type="checkbox" name="q1" value="huto">hűtőcső</label>
+            <label><input type="checkbox" name="q1" value="uzemanyagszint">üzemanyagszint</label>
+            <label><input type="checkbox" name="q1" value="tukor">tükör</label>
+            <label><input type="checkbox" name="q1" value="kipufogo">kipufogócsatorna</label>
+            <label><input type="checkbox" name="q1" value="olajszint">olajszint</label>
+            <label><input type="checkbox" name="q1" value="vilagitas">világítás</label>
+        </div>
 
 
-    <script src="script.js"></script>
+        <!-- 4. feladat -->
+        <div class="question">
+            <h2>4. feladat: Növényvédelem. Válaszd ki mikor érdemes permetezni a szőlőt.</h2>
+            <label><input type="radio" name="q2" value="a">párás időben</label>
+            <label><input type="radio" name="q2" value="b">napsütésben, szélcsendben</label>
+            <label><input type="radio" name="q2" value="c">esős szeles időben</label>
+        </div>
+
+        <button type="button" onclick="submitQuiz()">Quiz beküldése</button>
+    </form>
+
+    <div id="result"></div>
+
+    <script src="script.js">
+        
+    </script>
 </body>
 </html>
