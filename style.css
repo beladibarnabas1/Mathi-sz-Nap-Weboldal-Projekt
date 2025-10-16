@@ -40,7 +40,10 @@ footer {
 
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #e6f7e6;
+    background-image: url(haTTER.avif);
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
     color: #333;
     line-height: 1.6;
 }
@@ -48,7 +51,7 @@ body {
 .div1, .div2, .div3, .div4, .div5 {
     padding: 20px;
     margin: 10px auto;
-    background-color: #ffffff;
+
     border: 2px solid #4CAF50;
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
@@ -56,27 +59,31 @@ body {
 }
 
 .div1 {
-    background-color: #4CAF50;
+    background-color: #4caf4f91;
+    backdrop-filter: blur(2px);
     color: #ffffff;
     font-size: 1.5rem;
     padding: 30px;
 }
 
 .div2, .div4 {
-    background-color: #c8e6c9;
+    background-color: #c8e6c991;
+    backdrop-filter: blur(2px);
 }
 
 .div3 {
-    background-color: #a5d6a7;
+    background-color: #a5d6a791;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
+    backdrop-filter: blur(2px);
 }
 
 .div5 {
-    background-color: #4CAF50;
+    background-color: #4CAF5091;
     color: #ffffff;
     font-size: 0.9rem;
+    backdrop-filter: blur(2px);
 }
 
 @media (min-width: 769px) {
